@@ -2,7 +2,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import Icon from "./Icon";
 import { ProfileItemT } from "../types";
-import styles, { DARK_GRAY, WHITE } from "../assets/styles";
+import styles, { DARK_GRAY } from "../assets/styles";
 
 const ProfileItem = ({
   age,
@@ -11,15 +11,9 @@ const ProfileItem = ({
   info3,
   info4,
   location,
-  matches,
   name,
 }: ProfileItemT) => (
   <View style={styles.containerProfileItem}>
-    <View style={styles.matchesProfileItem}>
-      <Text style={styles.matchesTextProfileItem}>
-        <Icon name="heart" size={13} color={WHITE} /> {matches}% Match!
-      </Text>
-    </View>
 
     <Text style={styles.name}>{name}</Text>
 

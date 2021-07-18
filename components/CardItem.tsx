@@ -4,9 +4,7 @@ import Icon from "./Icon";
 import { CardItemT } from "../types";
 import styles, {
   DISLIKE_ACTIONS,
-  FLASH_ACTIONS,
   LIKE_ACTIONS,
-  STAR_ACTIONS,
   WHITE,
 } from "../assets/styles";
 
@@ -75,20 +73,12 @@ const CardItem = ({
       {/* ACTIONS */}
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.miniButton}>
-            <Icon name="star" color={STAR_ACTIONS} size={14} />
-          </TouchableOpacity>
-
           <TouchableOpacity style={styles.button}>
             <Icon name="heart" color={LIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.button}>
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.miniButton}>
-            <Icon name="flash" color={FLASH_ACTIONS} size={14} />
           </TouchableOpacity>
         </View>
       )}
