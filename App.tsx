@@ -5,6 +5,9 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, Matches, Messages, Profile } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
+import LogSignScreen from "./screens/LogSign";
+import LoginScreen from "./screens/Login";
+import SignUpScreen from "./screens/SignUp";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -12,6 +15,9 @@ const Tab = createBottomTabNavigator();
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator>
+    <Stack.Screen name="Login/SignUp" component={LogSignScreen}/>
+      <Stack.Screen name="Login" component={LoginScreen}/>
+      <Stack.Screen name="SignUp" component={SignUpScreen}/>
       <Stack.Screen
         name="Tab"
         options={{ headerShown: false, animationEnabled: false }}
